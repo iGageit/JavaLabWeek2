@@ -1,3 +1,12 @@
+/**************************************************** 
+Program Name: HealthApp.java 
+Programmer's Name: iGageit
+Program Description: Making a Gui of a BMI program that will take input and process it.  
+***********************************************************/
+
+
+
+
 // imported these because I saw it on the webex
 import java.text.DecimalFormat;
 import java.awt.GridLayout;
@@ -270,6 +279,19 @@ public class HealthApp extends javax.swing.JFrame {
 // hit the Display button to show results. 
     private void btnDisplayActionPerformed(java.awt.event.ActionEvent evt) {                                           
        
+// checking 
+if (txtName.getText().isEmpty() || 
+        txtAge.getText().isEmpty() || 
+        txtHeightFeet.getText().isEmpty() || 
+        txtHeightInches.getText().isEmpty() || 
+        txtWeight.getText().isEmpty())
+{
+    JOptionPane.showMessageDialog(null, "Please Provide all Inputs");
+            return; 
+}
+
+
+
 
 // Output
 calculateBMI();
@@ -378,7 +400,7 @@ txtBMI.setText((BMIString));
     }
    
      
-    
+   
    
 
 
